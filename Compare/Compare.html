@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+    <nav class="navbar navbar-expand-lg text-white navbar-light bg-light">
+        <div class="container-fluid text-white">
+<a class="navbar-brand" href="#">
+  <img src="logo2.0.png"  alt="" height="22px" width="38px" class="img-fluid"> 
+</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-white" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll text-white" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" href="../about.html">ABOUT US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  GALLERY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="../ring.html">Rings</a></li>
+                  <li><a class="dropdown-item" href="../earings.html">Earings</a></li>
+                  <li><a class="dropdown-item" href="../jewellery.html">Necklace</a></li>
+                  <li><a class="dropdown-item" href="Compare.html">Compare</a></li>
+                </ul>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" href="../contact us.html" tabindex="-1" aria-disabled="true">CONTACT US</a>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" href="../Locator.html" tabindex="-1" aria-disabled="true">LOCATION</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+             
+                <a class="nav-link disabled" href="#"> <i class="fas fa-user-circle">  </i> LOGIN</a>
+             
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="display-1 text-center">Compare Page</h1>
+            <div class="col-lg-4 col-md-6">
+<div class="form-group">
+    <label for="" class="form-check-label">Select your Category</label>
+    <select name="" id="brand1" class="form-select" onchange="brand1()">
+        <option>Select</option>
+        <option>Rings</option>
+        <option>Earings</option>
+        <option>Necklace</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="" class="form-check-label">Select your Original Brand</label>
+    <select name="" id="product1" class="form-select" onchange="product1()">
+
+    </select>
+    <div class="form-group" id="showproduct1">
+
+    </div>
+</div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                    <label for="" class="form-check-label">Select your Category</label>
+                    <select name="" id="brand2" class="form-select" onchange="brand2()">
+                        <option>Select</option>
+                        <option>Rings</option>
+                        <option>Earings</option>
+                        <option>Necklace</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="" class="form-check-label">Select your Semi Precious Brand</label>
+                    <select name="" id="product2" class="form-select" onchange="product2()">
+                
+                    </select>
+                    <div class="form-group" id="showproduct2">
+                
+                    </div>
+                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                    <label for="" class="form-check-label">Select your Category</label>
+                    <select name="" id="brand3" class="form-select" onchange="brand3()">
+                        <option>Select</option>
+                        <option>Rings</option>
+                        <option>Earings</option>
+                        <option>Necklace</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="" class="form-check-label">Select your Artificial Brand</label>
+                    <select name="" id="product3" class="form-select" onchange="product3()">
+                
+                    </select>
+                    <div class="form-group" id="showproduct3">
+                
+                    </div>
+                </div>
+                            </div>
+                        
+        </div>
+    </div>
+    <!-- 1st -->
+<script>
+    function brand1(){
+        var selectedbrand=document.getElementById("brand1").value;
+        var selectedproduct=document.getElementById("product1");
+
+        switch(selectedbrand){
+case 'Rings':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Ring 1</option>
+        <option>Ring 2</option>
+        <option>Ring 3</option>
+        <option>Ring 4</option>
+`;
+break;
+case 'Necklace':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Necklace 1</option>
+        <option>Necklace 2</option>
+        <option>Necklace 3</option>
+        <option>Necklace 4</option>
+`;
+break;
+case 'Earings':selectedproduct.innerHTML=`
+
+<option>Select</option>
+
+<option>Earing 1</option>
+        <option>Earing 2</option>
+        <option>Earing 3</option>
+        <option>Earing 4</option>
+`
+
+        }
+
+    }
+    
+function product1(){
+    var selectedproduct=document.getElementById("product1").value;
+    var showproduct1=document.getElementById("showproduct1");
+    switch(selectedproduct){
+
+        case 'Ring 1':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="1Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 2':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="2Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 3':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="3Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 4':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="2Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 1':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="1.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 2':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="2.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 3':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="3.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 4':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="4.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 1':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer1.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 2':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer2.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 3':showproduct1.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer3.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 4':showproduct1.innerHTML =`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer4.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+        
+        `
+
+    }
+}
+
+// 2ND
+
+    function brand2(){
+        var selectedbrand=document.getElementById("brand2").value;
+        var selectedproduct=document.getElementById("product2");
+
+        switch(selectedbrand){
+case 'Rings':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Ring 5</option>
+        <option>Ring 6</option>
+        <option>Ring 7</option>
+        <option>Ring 8</option>
+`;
+break;
+case 'Necklace':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Necklace 5</option>
+        <option>Necklace 6</option>
+        <option>Necklace 7</option>
+        <option>Necklace 8</option>
+`;
+break;
+case 'Earings':selectedproduct.innerHTML=`
+
+<option>Select</option>
+
+<option>Earing 5</option>
+        <option>Earing 6</option>
+        <option>Earing 7</option>
+        <option>Earing 8</option>
+`
+
+        }
+
+    }
+    
+function product2(){
+    var selectedproduct=document.getElementById("product2").value;
+    var showproduct2=document.getElementById("showproduct2");
+    switch(selectedproduct){
+
+        case 'Ring 5':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="5Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 6':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="6Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 7':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="7Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 8':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="8Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 5':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="5.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 6':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="6.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 7':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="7.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 8':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="8.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 5':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer5.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 6':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer6.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 7':showproduct2.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer7.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 8':showproduct2.innerHTML =`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer8.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+        
+        `
+
+    }
+}
+
+// 3ed
+
+function brand3(){
+        var selectedbrand=document.getElementById("brand3").value;
+        var selectedproduct=document.getElementById("product3");
+
+        switch(selectedbrand){
+case 'Rings':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Ring 9</option>
+        <option>Ring 10</option>
+        <option>Ring 11</option>
+        <option>Ring 12</option>
+`;
+break;
+case 'Necklace':selectedproduct.innerHTML=`
+<option>Select</option>
+
+<option>Necklace 9</option>
+        <option>Necklace 10</option>
+        <option>Necklace 11/option>
+        <option>Necklace 12</option>
+`;
+break;
+case 'Earings':selectedproduct.innerHTML=`
+
+<option>Select</option>
+
+<option>Earing 9</option>
+        <option>Earing 10</option>
+        <option>Earing 11</option>
+        <option>Earing 12</option>
+`
+
+        }
+
+    }
+    
+function product3(){
+    var selectedproduct=document.getElementById("product3").value;
+    var showproduct3=document.getElementById("showproduct3");
+    switch(selectedproduct){
+
+        case 'Ring 9':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="9Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 10':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="10Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 11':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="11Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Ring 12':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="12Ring.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL RING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 9':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="9.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 10':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="10.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 11':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="11.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Earing 12':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="12.jpeg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL EARING</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 9':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer9.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 10':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer10.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 11':showproduct3.innerHTML=`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer11.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        `;
+        break;
+        case 'Necklace 12':showproduct3.innerHTML =`
+        <div class="card">
+    <div class="card-body">
+        <img src="jewellwer12.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1>PASCAL NECKLACE</h1>
+            <p>Weight: 9.240 g</p>
+            <p>Size: 17</p>
+            <hr>
+            <p>Price: 6,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+        
+        `
+
+    }
+}
+    
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
